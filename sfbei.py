@@ -1,13 +1,10 @@
 n = int(input())
-readings = []
-
-for i in range(n):
-    readings.append(int(input()))
-
-readings = tuple(readings)
-
-even_readings = readings[0::2]
-odd_readings = readings[1::2]
-
-print("Even readings:", even_readings)
-print("Odd readings:", odd_readings)
+ids = tuple(map(int,input().split()))
+ids = list(ids)
+x = int(input())
+length=len(ids)
+l1=[]
+for i in range (length):
+    if (i+1)%x!=0:
+        l1.append(ids[i])
+print(tuple(l1))
