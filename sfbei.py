@@ -1,10 +1,10 @@
 n = int(input())
-ids = tuple(map(int,input().split()))
-ids = list(ids)
-x = int(input())
-length=len(ids)
-l1=[]
-for i in range (length):
-    if (i+1)%x!=0:
-        l1.append(ids[i])
-print(tuple(l1))
+
+rainfall_data = tuple(tuple(map(int, input().split())) for _ in range(n))
+
+year = int(input())
+
+selected_year = rainfall_data[year - 1]
+average = sum(selected_year) / len(selected_year)
+
+print(round(average, 2))
